@@ -1,17 +1,15 @@
-export const App = () => {
+import { ToastContainer } from "react-toastify";
+//import { Suspense, lasy } from "react";
+//import { Route, Routes } from "react-router-dom";
+import Navigation from './Navigation/Navigation'
+
+function App() { 
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        textTransform: 'uppercase',
-        color: '#010101',
-      }}
-    >
-      React homework template
-    </div>
-  );
-};
+    <section>
+      <ToastContainer />
+      <Navigation/>
+    </section>
+  )
+}
+
+export default App;
