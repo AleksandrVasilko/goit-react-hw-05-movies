@@ -14,8 +14,18 @@ const Reviews = () => {
     return (
         <>
             {reviews && reviews.total_results === 0 && (
-                <p></p>
-            )}    
+                <p>We dot'n haveany reviews for this movie</p>
+            )}
+            <ul className={s.reviewList}>
+                {reviews && reviews.results.map(review => (
+                    <li key={review.id} className={s.reviewBox}>
+                        <h3 className={s.reviewAuthor}>{review.author}</h3>
+                        <p>{review.content}</p>
+                    </li>
+                ))}
+            </ul>
         </>
     )
 }
+
+export default Reviews;
