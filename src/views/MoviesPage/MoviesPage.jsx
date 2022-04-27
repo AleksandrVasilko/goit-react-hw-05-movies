@@ -27,7 +27,7 @@ const MoviesPage = () => {
             return;
         }
         fetchSearchMovies(query).then().then(setSearchMovies);
-    }, [])
+    }, [searchParams])
 
     const onHandleChange = e => {
         setQuery(e.currentTarget.value);
