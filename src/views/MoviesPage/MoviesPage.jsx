@@ -2,7 +2,7 @@ import MoviesList from "components/MoviesList/MoviesList";
 import s from '../MoviesPage/MoviesPage.module.css';
 import { GoSearch } from 'react-icons/go';
 import { useEffect, useState } from "react";
-import { fetchSearchMovies } from "services/fetchMovies";
+import { fetchSearchMovies } from "../../services/fetchMovies";
 import { toast } from 'react-toastify';
 import { IconContext } from "react-icons";
 import { useSearchParams } from "react-router-dom";
@@ -27,7 +27,7 @@ const MoviesPage = () => {
             return;
         }
         fetchSearchMovies(query).then().then(setSearchMovies);
-    }, [])
+    }, [searchParams]);
 
     const onHandleChange = e => {
         setQuery(e.currentTarget.value);

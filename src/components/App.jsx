@@ -2,8 +2,8 @@ import { ToastContainer } from "react-toastify";
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import Navigation from './Navigation/Navigation';
-import Cast from './Cast'
-import Reviews from './Reviews'
+import Cast from './Cast';
+import Reviews from './Reviews';
 
 const HomePage = lazy(() =>
   import('../views/HomePage')
