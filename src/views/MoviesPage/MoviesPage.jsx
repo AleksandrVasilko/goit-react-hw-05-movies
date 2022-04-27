@@ -22,13 +22,7 @@ const MoviesPage = () => {
         fetchSearchMovies(queryValue).then().then(setSearchMovies);
     }, [queryValue]);
 
-   // useEffect(() => {
-    //    if (!query) {
-    //        return;
-    //    }
-    //    fetchSearchMovies(query).then().then(setSearchMovies);
-   // }, [searchParams]);
-
+  
     const onHandleChange = e => {
         setQuery(e.currentTarget.value);
     };
